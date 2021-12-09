@@ -1,6 +1,15 @@
 $breakpoint-mobile: 740px; // mobile
 $breakpoint-tablet: 1280px; // tablet
 
+@mixin container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
 @mixin limiter {
   width: 100%;
   max-width: $breakpoint-tablet;

@@ -4,6 +4,7 @@ import classNames from 'classnames/bind';
 import styles from './App.module.scss';
 
 import Header from './components/shared/Header';
+import Home from './components/Home';
 import RotaingLines from './components/css/RotaingLines';
 
 const cx = classNames.bind(styles);
@@ -23,7 +24,7 @@ function App() {
         <Header gnb={pages} />
         <div className={cx('content')}>
           <Routes>
-            <Route path="/" element={<div>Home</div>} />
+            <Route path="/" element={<Home />} />
             {pages.map((component, index) => (
               <Route
                 key={index}
