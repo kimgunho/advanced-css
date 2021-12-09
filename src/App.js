@@ -4,24 +4,34 @@ import classNames from 'classnames/bind';
 import styles from './App.module.scss';
 
 import Header from './components/shared/Header';
+import RotaingLines from './components/css/RotaingLines';
 
 const cx = classNames.bind(styles);
 
 function App() {
-  const gnbs = [
+  const pages = [
     {
       title: '3 rotating lines',
       link: '/loading/1',
+      compo: <RotaingLines />,
     },
   ];
 
   return (
     <BrowserRouter>
       <div className={cx('wrapper')}>
-        <Header gnb={gnbs} />
+        <Header gnb={pages} />
         <div className={cx('content')}>
           <Routes>
-            <Route />
+            <Route path="/" element={<div>Home</div>} />
+            {pages.map((component, index) => (
+              <Route
+                key={index}
+                path={component.link}
+                element={component.compo}
+              />
+            ))}
+            <Route path="*" element={<div>존재하지 않는 페이지입니다.</div>} />
           </Routes>
         </div>
       </div>

@@ -8,6 +8,9 @@ const cx = classNames.bind(styles);
 function Header({ gnb }) {
   return (
     <header className={cx('header')}>
+      <h1 className={cx('title')}>
+        <Link to="/">Advanced CSS3</Link>
+      </h1>
       <ol>
         {gnb.map(({ title, link }) => (
           <li key={title}>

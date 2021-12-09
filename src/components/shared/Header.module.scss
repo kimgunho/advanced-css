@@ -6,6 +6,17 @@
   padding: 1rem;
   box-sizing: border-box;
 
+  > .title {
+    white-space: normal;
+    font-size: 1.25rem;
+    font-weight: bold;
+    padding-bottom: 2rem;
+
+    > a {
+      color: white;
+    }
+  }
+
   li {
     margin-bottom: 0.5rem;
     margin-left: 0.5rem;
