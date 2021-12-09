@@ -9,6 +9,16 @@
   li {
     margin-bottom: 0.5rem;
     margin-left: 0.5rem;
+
+    &::before {
+      content: '\2022';
+      color: #333;
+      font-weight: bold;
+      display: inline-block;
+      width: 1rem;
+      margin-left: -1rem;
+    }
+
     > a {
       color: white;
     }
