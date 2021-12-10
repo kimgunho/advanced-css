@@ -6,6 +6,7 @@ import styles from './App.module.scss';
 import Header from './components/shared/Header';
 import Home from './components/Home';
 import RotaingLines from './components/css/RotaingLines';
+import NeonSignTitle from './components/css/NeonSignTitle';
 
 const cx = classNames.bind(styles);
 
@@ -15,6 +16,11 @@ function App() {
       title: '3 rotating lines',
       link: '/loading/1',
       compo: <RotaingLines />,
+    },
+    {
+      title: 'Neon sign title',
+      link: '/neonsign/1',
+      compo: <NeonSignTitle />,
     },
   ];
 

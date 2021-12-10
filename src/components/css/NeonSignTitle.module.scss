@@ -1,0 +1,80 @@
+@import '../../common.scss';
+
+.container {
+  @include container;
+  background-color: #111;
+
+  > .limiter {
+    width: 100%;
+    max-width: 480px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    user-select: none;
+
+    > h2 {
+      font-size: 3rem;
+      color: #ffdb39;
+      font-weight: lighter;
+      text-shadow: 0 0 4px #ffdb39;
+      position: relative;
+
+      &::before {
+        content: 'hello world!';
+        position: absolute;
+        left: 0;
+        filter: blur(1px);
+        top: 0;
+        right: 0;
+        opacity: 0.95;
+        bottom: 0;
+        color: #ffdb39;
+      }
+
+      > span {
+        animation: fade 1s linear infinite;
+
+        &:nth-child(1) {
+          animation-delay: 0.5s;
+        }
+        &:nth-child(2) {
+          animation-delay: 0.1s;
+        }
+        &:nth-child(3) {
+          animation-delay: 0.3s;
+        }
+        &:nth-child(4) {
+          animation-delay: 1s;
+        }
+        &:nth-child(5) {
+          animation-delay: 0.2s;
+        }
+        &:nth-child(6) {
+          animation-delay: 0.1s;
+        }
+      }
+    }
+
+    @keyframes fade {
+      0% {
+        opacity: 0;
+      }
+      1% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0;
+      }
+      51% {
+        opacity: 1;
+      }
+      99% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+  }
+}
