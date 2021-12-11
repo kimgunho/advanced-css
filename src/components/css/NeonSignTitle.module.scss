@@ -24,12 +24,23 @@
         content: 'hello world!';
         position: absolute;
         left: 0;
-        filter: blur(1px);
+        filter: blur(2px);
         top: 0;
         right: 0;
         opacity: 0.95;
         bottom: 0;
         color: #ffdb39;
+      }
+
+      &::after {
+        content: '!dlrow olleh';
+        position: absolute;
+        left: 0;
+        bottom: -50px;
+        right: 0;
+        transform: perspective(2em) rotate(180deg) rotateX(290deg);
+        opacity: 0.3;
+        filter: blur(2px);
       }
 
       > span {
