@@ -7,6 +7,7 @@ import Header from './components/shared/Header';
 import Home from './components/Home';
 import RotaingLines from './components/css/RotaingLines';
 import NeonSignTitle from './components/css/NeonSignTitle';
+import BorderAnimation from './components/css/BorderAnimation';
 
 const cx = classNames.bind(styles);
 
@@ -21,6 +22,11 @@ function App() {
       title: 'Neon sign title',
       link: '/neonsign/1',
       compo: <NeonSignTitle />,
+    },
+    {
+      title: 'border animation',
+      link: '/border/1',
+      compo: <BorderAnimation />,
     },
   ];
 

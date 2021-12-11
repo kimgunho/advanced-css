@@ -1,0 +1,76 @@
+@import '../../common.scss';
+
+.container {
+  @include container;
+  background-color: #2c2e3d;
+
+  > .limiter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    > .box {
+      @include flexCenter;
+      @include font-en;
+      width: 200px;
+      height: 200px;
+      margin: 10px;
+      background-color: #111;
+      border-radius: 10px;
+      color: yellowgreen;
+      position: relative;
+      z-index: 2;
+      overflow: hidden;
+      box-shadow: 10px 10px 10px #1111117a;
+
+      &:nth-child(2) {
+        border-radius: 50%;
+
+        &::before {
+          border-radius: 50%;
+          animation-delay: -3s;
+        }
+
+        &::after {
+          border-radius: 50%;
+        }
+      }
+
+      &::before {
+        content: '';
+        width: 150%;
+        height: 150%;
+        position: absolute;
+        background-image: conic-gradient(yellowgreen 20deg, #111 120deg);
+        animation: rotate 2s linear infinite;
+      }
+
+      &::after {
+        @include flexCenter;
+        content: 'Hello CSS';
+        position: absolute;
+        width: 190px;
+        height: 190px;
+        background-color: #111;
+      }
+
+      @keyframes rotate {
+        from {
+          transform: rotate(360deg);
+        }
+        to {
+          transform: rotate(0deg);
+        }
+      }
+    }
+
+    > .mouse {
+      font-size: 5rem;
+      color: crimson;
+      position: absolute;
+      bottom: -7rem;
+      transform: rotate(90deg);
+    }
+  }
+}
