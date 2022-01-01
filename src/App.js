@@ -8,6 +8,7 @@ import Home from './components/Home';
 import RotaingLines from './components/css/RotaingLines';
 import NeonSignTitle from './components/css/NeonSignTitle';
 import BorderAnimation from './components/css/BorderAnimation';
+import NavAnimation from './components/css/NavAnimation';
 
 const cx = classNames.bind(styles);
 
@@ -27,6 +28,11 @@ function App() {
       title: 'border animation',
       link: '/border/1',
       compo: <BorderAnimation />,
+    },
+    {
+      title: 'Nav animation',
+      link: '/nav/1',
+      compo: <NavAnimation />,
     },
   ];
 
