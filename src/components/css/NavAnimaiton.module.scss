@@ -1,1 +1,105 @@
 @import '../../common.scss';
+
+.container {
+  @include container;
+  background-color: #f0f0f0;
+
+  > .header {
+    width: 100%;
+    max-width: 400px;
+
+    > ul {
+      background-color: #36a9ba;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 70px;
+      position: relative;
+
+      > li {
+        cursor: pointer;
+        display: flex;
+        width: 20%;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        &.on {
+          > .icon {
+            top: 0;
+            font-size: 24px;
+            color: #fff;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+          }
+          > .title {
+            opacity: 1;
+            top: 15px;
+            color: #fff;
+          }
+        }
+
+        > .icon {
+          font-size: 20px;
+          color: #deb80a;
+          border: 3px solid transparent;
+          transform: translateY(-50%);
+          top: 50%;
+          transition: all 0.2s ease-in;
+          position: absolute;
+          z-index: 2;
+        }
+        > .title {
+          font-weight: 400;
+          opacity: 0;
+          position: relative;
+          top: 10px;
+          transition: all 0.2s ease-in;
+          font-size: 14px;
+          color: #414141;
+        }
+
+        > .panel {
+          z-index: 1;
+          position: absolute;
+          width: 40px;
+          height: 40px;
+          transition: all 0.1s ease-in;
+          background-color: #deb80a;
+          transform: translate(-50%, -50%);
+          box-shadow: 0px 2px 1px 0px #62530f;
+          border-radius: 50%;
+          top: 0;
+
+          &::before {
+            content: '';
+            background-color: #36a9ba;
+            box-shadow: 0 -10px 0 0 #f0f0f0;
+            position: absolute;
+            width: 20px;
+            height: 15px;
+            left: -20px;
+            top: 50%;
+            border-top-right-radius: 50%;
+          }
+
+          &::after {
+            content: '';
+            background-color: #36a9ba;
+            box-shadow: 0 -10px 0 0 #f0f0f0;
+            position: absolute;
+            width: 20px;
+            height: 15px;
+            right: -20px;
+            top: 50%;
+            border-top-left-radius: 50%;
+          }
+        }
+      }
+    }
+  }
+}

@@ -30,7 +30,7 @@ function App() {
       compo: <BorderAnimation />,
     },
     {
-      title: 'Nav animation',
+      title: 'Nav animation [width Js]',
       link: '/nav/1',
       compo: <NavAnimation />,
     },
